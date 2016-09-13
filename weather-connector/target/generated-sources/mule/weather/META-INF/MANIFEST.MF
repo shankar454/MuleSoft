@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Weather
+Bundle-SymbolicName: org.mule.tooling.ui.contribution.weather.3.7.0;singleton:=true
+Bundle-Version: 1.0.0.201609091805
+Bundle-Activator: org.mule.tooling.ui.contribution.WeatherActivator
+Bundle-Vendor: 
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.mule.tooling.core;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Eclipse-BundleShape: dir

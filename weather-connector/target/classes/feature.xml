@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><feature id="org.mule.tooling.ui.extension.weather-connector.3.7.0" label="Weather Connector (Mule 3.7+)" provider-name="Mulesoft, Inc." version="1.0.0.201609091805"><license/><plugin download-size="0" id="org.mule.tooling.ui.contribution.weather.3.7.0" install-size="0" unpack="true" version="1.0.0.201609091805"/></feature>

@@ -1,0 +1,14 @@
+org\mule\modules\weather\generated\agents\DefaultSplashScreenAgent.class
+org\mule\modules\weather\generated\adapters\WeatherConnectorConnectorConfigWsdlProviderAdapter.class
+org\mule\modules\weather\generated\config\WeatherNamespaceHandler.class
+org\mule\modules\weather\generated\adapter\PoolManager.class
+org\mule\modules\weather\generated\adapters\WeatherConnectorLifecycleInjectionAdapter.class
+org\mule\modules\weather\generated\adapters\WeatherConnectorMetadataAdapter.class
+org\mule\modules\weather\generated\config\WeatherConnectorConnectorConfigConfigDefinitionParser.class
+org\mule\modules\weather\WeatherConnector.class
+org\mule\modules\weather\generated\adapters\WeatherConnectorCapabilitiesAdapter.class
+org\mule\modules\weather\generated\adapters\WeatherConnectorProcessAdapter$1.class
+org\mule\modules\weather\generated\devkit\SplashScreenAgent.class
+org\mule\tooling\ui\contribution\WeatherActivator.class
+org\mule\modules\weather\config\ConnectorConfig.class
+org\mule\modules\weather\generated\adapters\WeatherConnectorProcessAdapter.class

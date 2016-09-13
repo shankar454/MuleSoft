@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<namespace xmlns="http://www.mulesoft.org/schema/mule/tooling.attributes" xmlns:mule="http://www.mulesoft.org/schema/mule/core" url="http://www.mulesoft.org/schema/mule/weather" prefix="weather">
+  <global-cloud-connector versions="[3.7.0,8.0.0]" caption="Weather" description="" icon="" localId="parentConfig" image="" abstract="true" extends="http://www.mulesoft.org/schema/mule/weather/abstractWeatherConnectorGeneric"></global-cloud-connector>
+  <global-cloud-connector versions="[3.7.0,8.0.0]" caption="Weather: Configuration" description="Global Configuration configuration information." icon="icons/theme.classic/weather-connector-small.png" localId="config" image="icons/theme.classic/weather-connector-large.png" abstract="false" extends="http://www.mulesoft.org/schema/mule/weather/parentConfig" connectivityTesting="off" metaData="dynamic" metaDataKeyDisplay="DISPLAY_NAME" supportsUserDefinedMetaData="false">
+    <attribute-category caption="General" description="Weather configuration properties.">
+      <group id="weatherGenericProperties" caption="Basic Settings">
+        <name name="name" caption="Name" description="Give a name to this configuration so it can be later referenced by config-ref." required="true"></name>
+      </group>
+      <group id="general" caption="General">
+        <useMetaData name="useMetaData" caption="useMetaData"></useMetaData>
+      </group>
+    </attribute-category>
+  </global-cloud-connector>
+  <cloud-connector caption="Abstractweatherconnectorgeneric" description="Interact with Weather." icon="icons/theme.classic/weather-connector-small.png" localId="abstractWeatherConnectorGeneric" image="icons/theme.classic/weather-connector-large.png" abstract="true">
+    <attribute-category caption="General" description="General.">
+      <group id="abstractWeatherConnectorGeneric" caption="Basic Settings">
+        <globalRef requiredType="http://www.mulesoft.org/schema/mule/weather/config" name="config-ref" caption="Connector Configuration" description="Specify which configuration to use for this invocation." required="true"></globalRef>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector versions="[3.7.0,8.0.0]" aliasId="org.mule.tooling.ui.modules.core.pattern.weather" caption="Weather" description="" icon="icons/theme.classic/weather-connector-small.png" localId="weather-connector" image="icons/theme.classic/weather-connector-large.png" extends="http://www.mulesoft.org/schema/mule/weather/abstractWeatherConnectorGeneric">
+    <attribute-category caption="General" description="General.">
+      <group id="weatherConnectorGeneric" caption="Basic Settings">
+        <modeSwitch alwaysCombo="true" name="Weather operations to execute" caption="Operation" description="Operation.">
+          <mode modeId="http://www.mulesoft.org/schema/mule/weather/invoke" modeLabel="Invoke"></mode>
+        </modeSwitch>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector caption="Invoke" icon="icons/theme.classic/weather-connector-small.png" localId="invoke" image="icons/theme.classic/weather-connector-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/weather/abstractWeatherConnectorGeneric" metaData="dynamic">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <multi-type-chooser captions="Service,Operation" keySeparator="||" associatedConfig="config-ref" affects="BOTH" name="type" caption="Type" description="The representation of the WSDL file plus an operation." supportsExpressions="true" required="true" javaType="java.lang.String"></multi-type-chooser>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+</namespace>
